@@ -82,6 +82,9 @@ __PACKAGE__->set_primary_key("id");
 
 # Created by DBIx::Class::Schema::Loader v0.07045 @ 2016-04-15 22:29:53
 # DO NOT MODIFY THIS OR ANYTHING ABOVE! md5sum:+mc+55vJV52WA9A71bnAWA
+__PACKAGE__->has_many(
+  addresses => 'AddressBook::Schema::AddressDB::Result::Address', 'person', {cascading_delete => 1 } );
+
 
 sub name {
   my $self = shift;
