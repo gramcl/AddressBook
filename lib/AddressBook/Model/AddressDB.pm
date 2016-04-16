@@ -7,7 +7,7 @@ __PACKAGE__->config(
     schema_class => 'AddressBook::Schema::AddressDB',
     
     connect_info => {
-        dsn => 'dbi:SQLite:database',
+        dsn => 'dbi:SQLite:tmp/database',
         user => '',
         password => '',
     }
