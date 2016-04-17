@@ -25,6 +25,7 @@ sub list :Local {
     my ( $self, $c ) = @_;
     my $people = $c->model('AddressDB::Person');
     $c->stash->{people} = $people;
+    $c->stash->{template} = 'person/list.tt2';
 }
 
 sub delete :Local {
@@ -40,6 +41,7 @@ sub delete :Local {
 		$c->response->status(404);
 		$c->stash->{error} = "No person $id";
 	}
+
 	$c->forward('list');
 }
 
