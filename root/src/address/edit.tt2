@@ -1,0 +1,3 @@
+[% META title="Address" %]
+<p>Address form</p>
+[%FormBuilder.render%]
